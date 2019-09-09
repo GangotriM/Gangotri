@@ -5,7 +5,11 @@ pipeline {
 
        stage('SCM Checkout') {
             steps {
+<<<<<<< HEAD
                 git  url: 'https://github.com/GangotriM/Gangotri.git'
+=======
+                git url: 'https://github.com/GangotriM/Gangotri.git'
+>>>>>>> 50464b0503a3aa56e58e818becfc59b53e01ae63
             }
         }
 
