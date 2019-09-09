@@ -5,11 +5,7 @@ pipeline {
 
        stage('SCM Checkout') {
             steps {
-<<<<<<< HEAD
-                git  url: 'https://github.com/GangotriM/Gangotri.git'
-=======
-                git url: 'https://github.com/GangotriM/Gangotri.git'
->>>>>>> 50464b0503a3aa56e58e818becfc59b53e01ae63
+                git credentialsId: '8e237d54-cc07-4aad-a3fe-51855a4d84c1', url: 'https://github.com/pramodk05/java_maven_jenkins.git'
             }
         }
 
@@ -52,7 +48,7 @@ pipeline {
         stage ('Terraform Setup') {
             steps {
                 script {
-                    def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
+                    def tfHome = tool name: 'Terraform_0.12.6', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
 
                 }
             sh 'terraform --version'
